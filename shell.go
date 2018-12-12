@@ -20,5 +20,5 @@ func exec_shell(s string) {
 }
 
 func main() {
-	exec_shell("curl -I odata.cc ") //Linux下执行的命令
+	exec_shell("curl -I 1 ") //Linux下执行的命令
 }
