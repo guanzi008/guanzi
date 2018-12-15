@@ -21,3 +21,11 @@ func main() {
 	fmt.Println(a)
 
 }
+func main1() {
+	ini := goini.NewGoINI()
+	if err := ini.LoadFile("./test.ini"); err != nil {
+		log.Println(err)
+		return
+	}
+	fmt.Println(ini.GetString("a", "b", "默认值"))
+}
