@@ -12,7 +12,12 @@ func main() {
 		log.Println(err)
 		return
 	}
+	ini.GetNames("")
+	a := ini.GetString("test", "url", "默认值")
 
-	a := ini.GetString("test", "hello", "默认值")
+	ini.LoadFile("H:/go/guanzi008/test2.ini")
+	fmt.Println(ini.GetNames(""))
+	fmt.Println(ini.GetString("a", "a", "a"))
 	fmt.Println(a)
+
 }

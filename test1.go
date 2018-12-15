@@ -8,14 +8,15 @@ import (
 
 func main() {
 	ini := goini.NewGoINI()
-	if err := ini.LoadFile(`H:\go\guanzi008\test.ini`); err != nil {
+	if err := ini.LoadFile(`H:\go\guanzi008\test2.ini`); err != nil {
 		fmt.Println("配置解析错误", err)
 		return
+	} else {
+		fmt.Println(ini.GetNames(""))
+		fmt.Println(ini.GetString("hi", "url", ""))
+		fmt.Println(ini.GetNames(""))
+		fmt.Println(ini.GetString("a", "a", "a"))
 	}
-	fmt.Println(ini.GetNames(""))
-	fmt.Println(ini.GetString("hi", "host", ""))
-	fmt.Println(ini.GetNames(""))
-	fmt.Println(ini.GetString("a", "a", "a"))
 }
 
 //GetString
